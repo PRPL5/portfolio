@@ -63,7 +63,7 @@ textarea {
   resize: none; }
 
 .heading-primary {
-  font-size: 6rem;
+  font-size: 5rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center; }
@@ -672,6 +672,13 @@ textarea {
     font-weight: 600;
     color: #777; }
 
+      .skills__skill:hover{
+         background:#0062b9;
+         scale: 1.1;
+         color: white;
+         transition: all 0.2s ease;
+      }
+
 .mouse {
   width: 25px;
   height: 40px;
@@ -702,3 +709,21 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+
+.laptop-mockup {
+  position: relative;
+  display: inline-block;
+}
+
+.laptop-mockup .laptop-screen-img {
+  position: absolute;
+  /* Adjust these values to fit your laptop mockup's screen */
+  top: 10%;
+  left: 13.5%;
+  width: 73%;
+  height: 78%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.10);
+  pointer-events: none;
+}

@@ -36,3 +36,28 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        emailjs.sendForm(
+          'service_argovyd',    // Your EmailJS service ID
+          'template_ikv0l4r',   // Your EmailJS template ID
+          form
+        ).then(
+          function(result) {
+            alert('Message sent successfully!');
+            form.reset();
+          },
+          function(error) {
+            alert('Failed to send message.');
+            console.log(error.text);
+          }
+        );
+      });
+    }
+  });
