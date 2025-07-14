@@ -23,11 +23,18 @@ hamMenuBtn.addEventListener('click', () => {
 })
 
 for (let i = 0; i < headerSmallMenuLinks.length; i++) {
-  headerSmallMenuLinks[i].addEventListener('click', () => {
-    smallMenu.classList.remove('header__sm-menu--active')
-    headerHamMenuBtn.classList.remove('d-none')
-    headerHamMenuCloseBtn.classList.add('d-none')
-  })
+  headerSmallMenuLinks[i].addEventListener('click', (e) => {
+    // Prevent reload for Home link
+    if (headerSmallMenuLinks[i].querySelector('a').getAttribute('href') === './index.html' ||
+        headerSmallMenuLinks[i].querySelector('a').getAttribute('href') === 'index.html') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    smallMenu.classList.remove('header__sm-menu--active');
+    headerHamMenuBtn.classList.remove('d-none');
+    headerHamMenuCloseBtn.classList.add('d-none');
+    // Removed: Preserve dark mode when navigating
+  });
 }
 
 // ---
@@ -77,6 +84,8 @@ headerLogoConatiner.addEventListener('click', () => {
       ...options
     });
   }
+
+  
 
   document.addEventListener('DOMContentLoaded', function () {
     const moonIcon = document.querySelector('.feather-moon');
@@ -164,9 +173,8 @@ headerLogoConatiner.addEventListener('click', () => {
     });
   });
 
-// ...existing code...
-
 document.addEventListener('DOMContentLoaded', function () {
+  // Removed: Restore dark mode on page load using localStorage
   const textPrimary = document.querySelector('.text-primary');
   if (textPrimary) {
     textPrimary.addEventListener('animationend', function (e) {
@@ -175,6 +183,5 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
 });
 

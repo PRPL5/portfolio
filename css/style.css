@@ -945,3 +945,14 @@ body.dark-mode .contact__btn {
     padding: 0;
   }
 }
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode a,
+body.dark-mode .header__link,
+body.dark-mode .header__sm-menu-link a {
+  color: #eee !important;
+}
