@@ -61,3 +61,106 @@ headerLogoConatiner.addEventListener('click', () => {
       });
     }
   });
+  
+  function setVantaEffect(id, options) {
+    if (window.vantaEffect) window.vantaEffect.destroy();
+    window.vantaEffect = VANTA.NET({
+      el: id,
+      ...options
+    });
+  }
+
+  function setVantaGlobeEffect(id, options) {
+    if (window.vantaGlobeEffect) window.vantaGlobeEffect.destroy();
+    window.vantaGlobeEffect = VANTA.GLOBE({
+      el: id,
+      ...options
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const moonIcon = document.querySelector('.feather-moon');
+    const homeHero = document.querySelector('.home-hero');
+    let darkMode = false;
+
+    // Initial Vanta effect
+    setVantaEffect("#vanta-bg", {
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x7aed4,
+      backgroundColor: 0x15153c
+    });
+
+    // Initial Globe effect for contact section
+    setVantaGlobeEffect("#contact", {
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x00ffff,
+      backgroundColor: 0x15153c
+    });
+
+    moonIcon.addEventListener('click', function () {
+      darkMode = !darkMode;
+      document.body.classList.toggle('dark-mode');
+      if (darkMode) {
+        homeHero.id = "vanta-bg2";
+        setVantaEffect("#vanta-bg2", {
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x7aed4,
+          backgroundColor: 0xf0f0f0
+        });
+        setVantaGlobeEffect("#contact", {
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x7aed4, // pinkish globe
+          backgroundColor: 0xf0f0f0 // dark background
+        });
+      } else {
+        homeHero.id = "vanta-bg";
+        setVantaEffect("#vanta-bg", {
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x7aed4,
+          backgroundColor: 0x15153c
+        });
+        setVantaGlobeEffect("#contact", {
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x00ffff,
+          backgroundColor: 0x15153c
+        });
+      }
+    });
+  });
+
