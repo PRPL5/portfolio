@@ -164,3 +164,17 @@ headerLogoConatiner.addEventListener('click', () => {
     });
   });
 
+// ...existing code...
+
+document.addEventListener('DOMContentLoaded', function () {
+  const textPrimary = document.querySelector('.text-primary');
+  if (textPrimary) {
+    textPrimary.addEventListener('animationend', function (e) {
+      if (e.animationName === 'typing') {
+        textPrimary.classList.add('typed-done');
+      }
+    });
+  }
+
+});
+

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,69 +11,55 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <header class="header">
     <div class="header__content">
       <div class="header__logo-container">
-
         <span class="header__logo-sub">Jakub Demaliaj</span>
       </div>
       <div class="header__main">
         <ul class="header__links">
+          <li class="header__link-wrapper"><a href="./index.html" class="header__link">Home</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#about" class="header__link">About</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#projects" class="header__link">Projects</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link">Contact</a></li>
           <li class="header__link-wrapper">
-            <a href="./index.html" class="header__link"> Home </a>
-          </li>
-          <li class="header__link-wrapper">
-            <a href="./index.html#about" class="header__link">About </a>
-          </li>
-          <li class="header__link-wrapper">
-            <a href="./index.html#projects" class="header__link">
-              Projects
-            </a>
-          </li>
-          <li class="header__link-wrapper">
-            <a href="./index.html#contact" class="header__link"> Contact </a>
-          </li>
-
-          <li class="header__link-wrapper">
-            <i><svg class="feather feather-moon" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+            <i>
+              <svg class="feather feather-moon" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
               </svg>
             </i>
           </li>
-
         </ul>
+
+        <!-- ✅ Fixed Menu Toggle + Moon Icon -->
         <div class="header__main-ham-menu-cont">
           <img src="./assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
           <img src="./assets/svg/ham-menu-close.svg" alt="hamburger menu close"
             class="header__main-ham-menu-close d-none" />
+          <i class="header__main-ham-menu-moon d-none">
+            <svg class="feather feather-moon" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </i>
         </div>
       </div>
     </div>
+
     <div class="header__sm-menu">
       <div class="header__sm-menu-content">
         <ul class="header__sm-menu-links">
-          <li class="header__sm-menu-link">
-            <a href="./index.html"> Home </a>
-          </li>
-
-          <li class="header__sm-menu-link">
-            <a href="./index.html#about"> About </a>
-          </li>
-
-          <li class="header__sm-menu-link">
-            <a href="./index.html#projects"> Projects </a>
-          </li>
-
-          <li class="header__sm-menu-link">
-            <a href="./index.html#contact"> Contact </a>
-          </li>
+          <li class="header__sm-menu-link"><a href="./index.html">Home</a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#about">About</a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#projects">Projects</a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -84,8 +69,7 @@
       <h1 class="heading-primary">Hey, My name is Jakub Demaliaj</h1>
       <div class="home-hero__info">
         <p class="text-primary">
-          A second year CS student who aspires to be a Web Developer
-        </p>
+          A second year CS student who aspires to be a Web Developer</p>
       </div>
       <div class="home-hero__cta">
         <a href="./#projects" class="btn btn--bg">Projects</a>
